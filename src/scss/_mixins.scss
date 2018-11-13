@@ -1,0 +1,13 @@
+@mixin font-italic($size, $font-weight) {
+  font-family: Arial, sans-serif;
+  font-size: $size;
+  font-style: italic;
+  font-weight: $font-weight;
+  color: grey;
+}
+
+@mixin border($width){
+  border-style: solid;
+  border-width: $width;
+  border-color: yellow;
+}

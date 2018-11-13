@@ -1,0 +1,86 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+body {
+  background: #1d1e22;
+  text-align: center;
+}
+
+.checkcontainer__label {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+  color: grey;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 30px);
+  grid-template-rows: repeat(5, 30px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.item {
+  position: relative;
+  border-radius: 60px;
+  display: inline-block;
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #000000;
+  transition: background 6s;
+}
+
+.item:hover::after {
+  background: yellow;
+  transition: background 0s;
+}
+
+.checkcontainer__input:checked + .container .item {
+  transition: background 6s;
+  width: 60px;
+  height: 60px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: yellow;
+}
+
+.checkcontainer__input:checked + .container .item::after {
+  display: none;
+}
+
+.checkcontainer__input:checked + .container .item:hover {
+  background: yellow;
+  transition: background 0s;
+}

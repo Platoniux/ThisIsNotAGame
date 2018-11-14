@@ -6,7 +6,7 @@
   color: grey;
 }
 
-@mixin border($width){
+@mixin border($width) {
   border-style: solid;
   border-width: $width;
   border-color: yellow;

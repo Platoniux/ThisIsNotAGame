@@ -20,12 +20,13 @@ body {
 
 .item {
   position: relative;
-  border-radius: 60px;
+  border-radius: ($edge * $ratio);
   display: inline-block;
 
   &::after {
     content: '';
     position: absolute;
+    left: 0;
     width: $edge;
     height: $edge;
     background: $color-items;
@@ -44,8 +45,7 @@ body {
 
   & + .container .item {
     transition: background 6s;
-    width: 60px;
-    height: 60px;
+    @include circle($ratio);
     @include border(1px);
   }
 

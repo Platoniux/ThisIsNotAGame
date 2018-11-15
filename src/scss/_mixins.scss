@@ -11,3 +11,8 @@
   border-width: $width;
   border-color: yellow;
 }
+
+@mixin circle($coef) {
+  width: ($edge * $coef);
+  height: ($edge * $coef);
+}
